@@ -32,16 +32,23 @@ export async function proxy(request: NextRequest) {
 
   const { pathname } = request.nextUrl
 
-  const isAuthPage =
+  // 로그인 없이 접근 가능한 경로
+  const isPublicPage =
     pathname.startsWith('/login') ||
-    pathname.startsWith('/signup') ||
-    pathname.startsWith('/reset-password')
+    pathname.startsWith('/reset-password') ||
+    pathname.startsWith('/auth')
 
-  if (!user && !isAuthPage && !pathname.startsWith('/auth')) {
+  // 로그인 후에도 접근 가능해야 하는 경로 (리다이렉트 대상 제외)
+  const isSignupFlow =
+    pathname.startsWith('/signup')
+
+  if (!user && !isPublicPage && !isSignupFlow) {
     return NextResponse.redirect(new URL('/login', request.url))
   }
 
-  if (user && isAuthPage) {
+  // 로그인 유저가 로그인/비밀번호재설정 페이지에 접근하면 /clubs로 보냄
+  // /signup/complete는 프로필 미완성 유저가 거쳐야 하므로 리다이렉트하지 않음
+  if (user && isPublicPage) {
     return NextResponse.redirect(new URL('/clubs', request.url))
   }
 
