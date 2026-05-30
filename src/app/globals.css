@@ -58,3 +58,22 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* safelist — 모바일 반응형 */
+.hidden {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:pb-0 {
+    padding-bottom: 0;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+}
