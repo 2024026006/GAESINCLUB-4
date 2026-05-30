@@ -28,7 +28,7 @@ export default async function NoticesPage({ params }: { params: Promise<{ id: st
       <div className="mb-4 flex items-center justify-between">
         <h2 className="text-lg font-semibold text-gray-900">공지사항</h2>
         {canWrite && (
-          <Link href={`/clubs/${clubId}/notices/new`} className="rounded-lg bg-blue-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-blue-700">
+          <Link href={`/clubs/${clubId}/notices/new`} className="rounded-lg bg-cbnu-red px-3 py-1.5 text-sm font-medium text-white hover:bg-cbnu-red-hover">
             + 작성
           </Link>
         )}
@@ -38,8 +38,8 @@ export default async function NoticesPage({ params }: { params: Promise<{ id: st
         <div className="mb-4 flex flex-col gap-2">
           {pinned.map((n) => (
             <Link key={n.id} href={`/clubs/${clubId}/notices/${n.id}`}
-              className="flex items-center gap-3 rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 hover:bg-blue-100 transition-colors">
-              <span className="text-xs font-semibold text-blue-600 shrink-0">📌 고정</span>
+              className="flex items-center gap-3 rounded-xl border border-cbnu-red/30 bg-cbnu-red-surface px-4 py-3 hover:bg-cbnu-red/10 transition-colors">
+              <span className="text-xs font-semibold text-cbnu-red shrink-0">📌 고정</span>
               <span className="flex-1 truncate font-medium text-gray-900">{n.title}</span>
               <span className="text-xs text-gray-500 shrink-0">{formatDate(n.created_at)}</span>
             </Link>

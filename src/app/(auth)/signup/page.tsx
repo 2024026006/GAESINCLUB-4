@@ -88,7 +88,7 @@ export default function SignupPage() {
       </form>
       <p className="mt-4 text-center text-sm text-gray-600">
         이미 계정이 있으신가요?{' '}
-        <Link href="/login" className="font-medium text-blue-600 hover:underline">
+        <Link href="/login" className="font-medium text-club-blue hover:underline">
           로그인
         </Link>
       </p>

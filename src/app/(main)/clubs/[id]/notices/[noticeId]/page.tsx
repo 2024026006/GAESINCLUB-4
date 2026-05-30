@@ -43,7 +43,7 @@ export default async function NoticeDetailPage({
 
       <div className="rounded-xl border border-gray-200 bg-white p-6">
         {notice.is_pinned && (
-          <span className="mb-2 inline-block text-xs font-semibold text-blue-600">📌 고정 공지</span>
+          <span className="mb-2 inline-block text-xs font-semibold text-cbnu-red">📌 고정 공지</span>
         )}
         <h1 className="text-xl font-bold text-gray-900">{notice.title}</h1>
         <div className="mt-2 flex items-center gap-3 text-sm text-gray-500">

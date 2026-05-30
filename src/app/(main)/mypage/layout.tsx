@@ -20,7 +20,7 @@ export default function MypageLayout({ children }: { children: React.ReactNode }
           <Link key={tab.href} href={tab.href}
             className={cn(
               'flex-1 rounded-lg py-2 text-center text-sm font-medium transition-colors',
-              pathname === tab.href ? 'bg-blue-600 text-white' : 'text-gray-600 hover:bg-gray-100'
+              pathname === tab.href ? 'bg-cbnu-red text-white' : 'text-gray-600 hover:bg-gray-100'
             )}>
             {tab.label}
           </Link>

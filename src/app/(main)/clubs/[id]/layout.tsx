@@ -83,7 +83,7 @@ async function JoinButton({ clubId, userId }: { clubId: string; userId: string }
     <form action={`/api/clubs/${clubId}/join`} method="POST">
       <button
         type="submit"
-        className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+        className="rounded-lg bg-cbnu-red px-4 py-2 text-sm font-medium text-white hover:bg-cbnu-red-hover"
       >
         가입 신청
       </button>

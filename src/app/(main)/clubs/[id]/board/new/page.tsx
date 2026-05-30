@@ -38,7 +38,7 @@ export default function NewPostPage() {
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">내용</label>
             <textarea value={content} onChange={(e) => setContent(e.target.value)} required rows={10}
-              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none resize-y" />
+              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-cbnu-red focus:outline-none resize-y" />
           </div>
           {error && <p className="text-sm text-red-600">{error}</p>}
           <div className="flex gap-3">

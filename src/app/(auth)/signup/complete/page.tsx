@@ -76,7 +76,7 @@ export default function SignupCompletePage() {
             value={college}
             onChange={(e) => { setCollege(e.target.value); setDepartment('') }}
             required
-            className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+            className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-cbnu-red focus:outline-none"
           >
             <option value="">선택</option>
             {Object.keys(COLLEGES).map((c) => (
@@ -91,7 +91,7 @@ export default function SignupCompletePage() {
             onChange={(e) => setDepartment(e.target.value)}
             required
             disabled={!college}
-            className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none disabled:bg-gray-50"
+            className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-cbnu-red focus:outline-none disabled:bg-gray-50"
           >
             <option value="">선택</option>
             {departments.map((d) => (

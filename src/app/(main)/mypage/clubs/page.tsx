@@ -18,14 +18,14 @@ export default async function MyclubsPage() {
       {(!memberships || memberships.length === 0) && (
         <div className="rounded-xl border border-gray-200 bg-white p-12 text-center">
           <p className="text-gray-500">가입된 동아리가 없습니다.</p>
-          <Link href="/clubs" className="mt-3 inline-block text-sm text-blue-600 hover:underline">동아리 탐색하기</Link>
+          <Link href="/clubs" className="mt-3 inline-block text-sm text-club-blue hover:underline">동아리 탐색하기</Link>
         </div>
       )}
       {memberships?.map((m) => {
         const club = m.club as any
         return (
           <Link key={club.id} href={`/clubs/${club.id}`}
-            className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white px-5 py-4 hover:border-blue-300 transition-colors">
+            className="flex items-center gap-4 rounded-xl border border-gray-200 bg-white px-5 py-4 hover:border-cbnu-red/40 transition-colors">
             <div className="flex-1">
               <div className="flex items-center gap-2">
                 <span className="font-semibold text-gray-900">{club.name}</span>

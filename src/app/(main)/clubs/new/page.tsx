@@ -65,7 +65,7 @@ export default function NewClubPage() {
               onChange={(e) => setName(e.target.value)}
               required
               placeholder="공식 동아리 이름 선택"
-              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-cbnu-red focus:outline-none"
             />
             <datalist id="official-clubs">
               {OFFICIAL_CLUB_NAMES.map((n) => <option key={n} value={n} />)}
@@ -105,7 +105,7 @@ export default function NewClubPage() {
               onChange={(e) => setIntro(e.target.value)}
               maxLength={100}
               rows={2}
-              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none resize-none"
+              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-cbnu-red focus:outline-none resize-none"
             />
           </div>
 

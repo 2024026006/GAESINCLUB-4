@@ -89,7 +89,7 @@ export function FeesClient({ fees, feeStatuses, canManage, clubId, userId }: Fee
                 {f.type === '입금' ? '+' : '-'}{formatCurrency(f.amount)}
               </span>
               <span className="text-xs text-gray-400 shrink-0">{formatDate(f.created_at)}</span>
-              {f.receipt_url && <a href={f.receipt_url} target="_blank" className="text-xs text-blue-600 shrink-0">영수증</a>}
+              {f.receipt_url && <a href={f.receipt_url} target="_blank" className="text-xs text-club-blue shrink-0">영수증</a>}
             </div>
           ))}
           {fees.length === 0 && <p className="px-4 py-8 text-center text-sm text-gray-500">회비 내역이 없습니다.</p>}

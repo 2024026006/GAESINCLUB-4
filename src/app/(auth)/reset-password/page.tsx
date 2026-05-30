@@ -28,7 +28,7 @@ export default function ResetPasswordPage() {
     return (
       <div className="rounded-xl bg-white p-8 shadow-sm border border-gray-200 text-center">
         <p className="text-sm text-gray-600"><strong>{email}</strong>로 재설정 링크를 발송했습니다.</p>
-        <Link href="/login" className="mt-4 inline-block text-sm text-blue-600 hover:underline">로그인으로 돌아가기</Link>
+        <Link href="/login" className="mt-4 inline-block text-sm text-club-blue hover:underline">로그인으로 돌아가기</Link>
       </div>
     )
   }
@@ -41,7 +41,7 @@ export default function ResetPasswordPage() {
         {error && <p className="text-sm text-red-600">{error}</p>}
         <Button type="submit" loading={loading} className="w-full">재설정 링크 발송</Button>
       </form>
-      <Link href="/login" className="mt-4 block text-center text-sm text-gray-500 hover:text-blue-600">로그인으로 돌아가기</Link>
+      <Link href="/login" className="mt-4 block text-center text-sm text-gray-500 hover:text-club-blue">로그인으로 돌아가기</Link>
     </div>
   )
 }

@@ -72,7 +72,7 @@ export default function ClubSettingsPage() {
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">한 줄 소개 <span className="text-gray-400">({intro.length}/100)</span></label>
             <textarea value={intro} onChange={(e) => setIntro(e.target.value)} maxLength={100} rows={2}
-              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none resize-none" />
+              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-cbnu-red focus:outline-none resize-none" />
           </div>
 
           <Button type="submit" loading={saving}>저장</Button>

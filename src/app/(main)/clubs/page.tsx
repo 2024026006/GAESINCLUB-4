@@ -31,7 +31,7 @@ async function ClubList({ q, category, recruit }: { q?: string; category?: Categ
         <Link
           key={club.id}
           href={`/clubs/${club.id}`}
-          className="flex flex-col gap-3 rounded-xl border border-gray-200 bg-white p-5 hover:border-blue-300 hover:shadow-sm transition-all"
+          className="flex flex-col gap-3 rounded-xl border border-gray-200 bg-white p-5 hover:border-cbnu-red/40 hover:shadow-sm transition-all"
         >
           <div className="flex items-start justify-between gap-2">
             <h3 className="font-semibold text-gray-900 truncate">{club.name}</h3>
@@ -61,7 +61,7 @@ export default async function ClubsPage({
         <h1 className="text-2xl font-bold text-gray-900">동아리 탐색</h1>
         <Link
           href="/clubs/new"
-          className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+          className="rounded-lg bg-cbnu-red px-4 py-2 text-sm font-medium text-white hover:bg-cbnu-red-hover"
         >
           + 동아리 개설
         </Link>
@@ -74,7 +74,7 @@ export default async function ClubsPage({
       <div className="mb-4 flex flex-wrap gap-2">
         <Link
           href="/clubs"
-          className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${!category ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+          className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${!category ? 'bg-cbnu-red text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
         >
           전체
         </Link>
@@ -82,7 +82,7 @@ export default async function ClubsPage({
           <Link
             key={cat}
             href={`/clubs?${new URLSearchParams({ ...(q && { q }), category: cat, ...(recruit && { recruit }) })}`}
-            className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${category === cat ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
+            className={`rounded-full px-3 py-1.5 text-xs font-medium transition-colors ${category === cat ? 'bg-cbnu-red text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}
           >
             {cat}
           </Link>

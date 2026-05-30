@@ -3,14 +3,14 @@ import type { Category, RecruitStatus, Role } from '@/types'
 
 const ROLE_COLORS: Record<Role, string> = {
   '방장': 'bg-purple-100 text-purple-800',
-  '임원': 'bg-blue-100 text-blue-800',
+  '임원': 'bg-club-blue/15 text-club-blue',
   '총무': 'bg-green-100 text-green-800',
   '일반 회원': 'bg-gray-100 text-gray-700',
 }
 
 const CATEGORY_COLORS: Record<Category, string> = {
   '교양': 'bg-yellow-100 text-yellow-800',
-  '학술': 'bg-blue-100 text-blue-800',
+  '학술': 'bg-club-blue/15 text-club-blue',
   '문화': 'bg-pink-100 text-pink-800',
   '봉사': 'bg-green-100 text-green-800',
   '체육': 'bg-orange-100 text-orange-800',

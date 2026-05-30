@@ -86,7 +86,7 @@ export default function ChatPage() {
               <Avatar name={msg.sender?.name ?? '?'} size="sm" />
               <div className={`max-w-xs ${isMine ? 'items-end' : 'items-start'} flex flex-col gap-0.5`}>
                 {!isMine && <span className="text-xs font-medium text-gray-600">{msg.sender?.name}</span>}
-                <div className={`rounded-2xl px-3 py-2 text-sm ${isMine ? 'bg-blue-600 text-white rounded-tr-sm' : 'bg-gray-100 text-gray-900 rounded-tl-sm'}`}>
+                <div className={`rounded-2xl px-3 py-2 text-sm ${isMine ? 'bg-cbnu-red text-white rounded-tr-sm' : 'bg-gray-100 text-gray-900 rounded-tl-sm'}`}>
                   {msg.content}
                   {msg.image_url && <img src={msg.image_url} alt="" className="mt-2 max-w-[200px] rounded-lg" />}
                 </div>
@@ -110,12 +110,12 @@ export default function ChatPage() {
           value={text}
           onChange={(e) => setText(e.target.value)}
           placeholder="메시지를 입력하세요..."
-          className="flex-1 rounded-xl border border-gray-300 px-4 py-2.5 text-sm focus:border-blue-500 focus:outline-none"
+          className="flex-1 rounded-xl border border-gray-300 px-4 py-2.5 text-sm focus:border-cbnu-red focus:outline-none"
         />
         <button
           type="submit"
           disabled={!text.trim() || loading}
-          className="rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-medium text-white hover:bg-blue-700 disabled:opacity-50"
+          className="rounded-xl bg-cbnu-red px-4 py-2.5 text-sm font-medium text-white hover:bg-cbnu-red-hover disabled:opacity-50"
         >
           전송
         </button>

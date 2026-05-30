@@ -56,12 +56,12 @@ export default function LoginPage() {
         </Button>
       </form>
       <div className="mt-4 flex flex-col items-center gap-2 text-sm text-gray-600">
-        <Link href="/reset-password" className="hover:text-blue-600">
+        <Link href="/reset-password" className="hover:text-club-blue">
           비밀번호 재설정
         </Link>
         <span>
           계정이 없으신가요?{' '}
-          <Link href="/signup" className="font-medium text-blue-600 hover:underline">
+          <Link href="/signup" className="font-medium text-club-blue hover:underline">
             회원가입
           </Link>
         </span>

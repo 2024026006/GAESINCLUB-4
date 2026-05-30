@@ -106,7 +106,7 @@ export function CalendarClient({ events, clubId, userId, canManage }: CalendarCl
       <div className="rounded-xl border border-gray-200 bg-white overflow-hidden">
         <div className="grid grid-cols-7 border-b border-gray-100">
           {DAYS.map((d, i) => (
-            <div key={d} className={`py-2 text-center text-xs font-medium ${i === 0 ? 'text-red-500' : i === 6 ? 'text-blue-500' : 'text-gray-500'}`}>{d}</div>
+            <div key={d} className={`py-2 text-center text-xs font-medium ${i === 0 ? 'text-red-500' : i === 6 ? 'text-club-blue' : 'text-gray-500'}`}>{d}</div>
           ))}
         </div>
         <div className="grid grid-cols-7">
@@ -120,11 +120,11 @@ export function CalendarClient({ events, clubId, userId, canManage }: CalendarCl
               <button
                 key={idx}
                 onClick={() => setSelectedDate(isSelected ? null : dateStr)}
-                className={`border-b border-r border-gray-100 h-20 p-1.5 text-left text-xs transition-colors ${isSelected ? 'bg-blue-50' : 'hover:bg-gray-50'}`}
+                className={`border-b border-r border-gray-100 h-20 p-1.5 text-left text-xs transition-colors ${isSelected ? 'bg-cbnu-red/8' : 'hover:bg-gray-50'}`}
               >
-                <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full text-xs ${isToday ? 'bg-blue-600 text-white' : 'text-gray-700'}`}>{day}</span>
+                <span className={`inline-flex h-5 w-5 items-center justify-center rounded-full text-xs ${isToday ? 'bg-cbnu-red text-white' : 'text-gray-700'}`}>{day}</span>
                 {dayEvents.slice(0, 2).map((e) => (
-                  <div key={e.id} className="mt-0.5 truncate rounded bg-blue-100 px-1 text-blue-700">{e.title}</div>
+                  <div key={e.id} className="mt-0.5 truncate rounded bg-cbnu-red/12 px-1 text-cbnu-red">{e.title}</div>
                 ))}
                 {dayEvents.length > 2 && <div className="text-gray-400">+{dayEvents.length - 2}</div>}
               </button>
@@ -154,7 +154,7 @@ export function CalendarClient({ events, clubId, userId, canManage }: CalendarCl
                 <div className="mt-3 flex flex-wrap gap-2">
                   {(['참석', '불참', '미정'] as VoteOption[]).map((v) => (
                     <button key={v} onClick={() => handleVote(e.id, v)}
-                      className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${myVote === v ? 'bg-blue-600 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
+                      className={`rounded-full px-3 py-1 text-xs font-medium transition-colors ${myVote === v ? 'bg-cbnu-red text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`}>
                       {VOTE_LABELS[v]} {voteCounts[v]}명
                     </button>
                   ))}
@@ -174,7 +174,7 @@ export function CalendarClient({ events, clubId, userId, canManage }: CalendarCl
           <div className="flex flex-col gap-1">
             <label className="text-sm font-medium text-gray-700">설명 (선택)</label>
             <textarea value={newDesc} onChange={(e) => setNewDesc(e.target.value)} rows={3}
-              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none" />
+              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-cbnu-red focus:outline-none" />
           </div>
         </div>
       </Dialog>

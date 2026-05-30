@@ -50,7 +50,7 @@ export function CommentForm({ postId, clubId, userId }: { postId: string; clubId
   return (
     <form onSubmit={handleSubmit} className="flex gap-2">
       <input value={content} onChange={(e) => setContent(e.target.value)} placeholder="댓글을 입력하세요..."
-        className="flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none" />
+        className="flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-cbnu-red focus:outline-none" />
       <Button type="submit" loading={loading} disabled={!content.trim()}>등록</Button>
     </form>
   )

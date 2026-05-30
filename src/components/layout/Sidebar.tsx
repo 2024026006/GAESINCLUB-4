@@ -31,7 +31,7 @@ export function Sidebar({ user }: SidebarProps) {
   return (
     <aside className="flex h-full w-60 shrink-0 flex-col border-r border-gray-200 bg-white">
       <div className="flex h-14 items-center border-b border-gray-100 px-4">
-        <Link href="/clubs" className="text-lg font-bold text-blue-600">
+        <Link href="/clubs" className="text-lg font-bold text-cbnu-red">
           개신클럽
         </Link>
       </div>
@@ -44,7 +44,7 @@ export function Sidebar({ user }: SidebarProps) {
             className={cn(
               'flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors',
               pathname.startsWith(item.href)
-                ? 'bg-blue-50 text-blue-700'
+                ? 'bg-cbnu-red/10 text-cbnu-red'
                 : 'text-gray-700 hover:bg-gray-100'
             )}
           >

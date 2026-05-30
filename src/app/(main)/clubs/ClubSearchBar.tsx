@@ -29,11 +29,11 @@ export function ClubSearchBar({ currentQ, currentRecruit }: ClubSearchBarProps) 
         value={q}
         onChange={(e) => setQ(e.target.value)}
         placeholder="동아리 이름 검색..."
-        className="flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none"
+        className="flex-1 rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-cbnu-red focus:outline-none"
       />
       <button
         type="submit"
-        className="rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white hover:bg-blue-700"
+        className="rounded-lg bg-cbnu-red px-4 py-2 text-sm font-medium text-white hover:bg-cbnu-red-hover"
       >
         검색
       </button>

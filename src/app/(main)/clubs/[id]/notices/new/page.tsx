@@ -49,7 +49,7 @@ export default function NewNoticePage({ params }: { params: Promise<{ id: string
               onChange={(e) => setContent(e.target.value)}
               required
               rows={8}
-              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none resize-y"
+              className="rounded-lg border border-gray-300 px-3 py-2 text-sm focus:border-cbnu-red focus:outline-none resize-y"
             />
           </div>
           <label className="flex items-center gap-2 cursor-pointer">

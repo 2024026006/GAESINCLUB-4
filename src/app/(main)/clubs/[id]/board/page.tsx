@@ -17,7 +17,7 @@ export default async function BoardPage({ params }: { params: Promise<{ id: stri
     <div>
       <div className="mb-4 flex items-center justify-between">
         <h2 className="text-lg font-semibold">게시판</h2>
-        <Link href={`/clubs/${clubId}/board/new`} className="rounded-lg bg-blue-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-blue-700">
+        <Link href={`/clubs/${clubId}/board/new`} className="rounded-lg bg-cbnu-red px-3 py-1.5 text-sm font-medium text-white hover:bg-cbnu-red-hover">
           + 글쓰기
         </Link>
       </div>

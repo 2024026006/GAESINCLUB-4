@@ -36,7 +36,7 @@ export function GalleryClient({ items, clubId, userId }: { items: any[]; clubId:
     <div>
       <div className="mb-4 flex items-center justify-between">
         <h2 className="text-lg font-semibold">갤러리</h2>
-        <label className="cursor-pointer rounded-lg bg-blue-600 px-3 py-1.5 text-sm font-medium text-white hover:bg-blue-700">
+        <label className="cursor-pointer rounded-lg bg-cbnu-red px-3 py-1.5 text-sm font-medium text-white hover:bg-cbnu-red-hover">
           {uploading ? '업로드 중...' : '+ 업로드'}
           <input type="file" accept="image/*,application/pdf" onChange={handleUpload} className="hidden" disabled={uploading} />
         </label>

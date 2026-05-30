@@ -83,7 +83,7 @@ export function MembersClient({ members, requests, clubId, currentUserId, isLead
                   <p className="text-xs text-gray-500">{req.user?.department} · {req.user?.student_id}</p>
                 </div>
                 <div className="flex items-center gap-2">
-                  <button onClick={() => setApproveTarget(req)} className="rounded-lg bg-blue-600 px-3 py-1.5 text-xs font-medium text-white hover:bg-blue-700">승인</button>
+                  <button onClick={() => setApproveTarget(req)} className="rounded-lg bg-cbnu-red px-3 py-1.5 text-xs font-medium text-white hover:bg-cbnu-red-hover">승인</button>
                   <button onClick={() => handleReject(req.id)} className="rounded-lg bg-gray-200 px-3 py-1.5 text-xs font-medium text-gray-700 hover:bg-gray-300">거절</button>
                 </div>
               </div>

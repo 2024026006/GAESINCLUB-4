@@ -31,7 +31,7 @@ export function ClubNav({ clubId, isMember, role }: { clubId: string; isMember: 
             href={href}
             className={cn(
               'shrink-0 rounded-lg px-4 py-2 text-sm font-medium transition-colors',
-              active ? 'bg-blue-600 text-white' : 'text-gray-600 hover:bg-gray-100'
+              active ? 'bg-cbnu-red text-white' : 'text-gray-600 hover:bg-gray-100'
             )}
           >
             {tab.label}

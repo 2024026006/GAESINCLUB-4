@@ -28,7 +28,7 @@ export default async function FeesPage({ params }: { params: Promise<{ id: strin
         {[
           { label: '총 입금액', value: totalIn, color: 'text-green-600' },
           { label: '총 지출액', value: totalOut, color: 'text-red-600' },
-          { label: '현재 잔액', value: totalIn - totalOut, color: 'text-blue-600' },
+          { label: '현재 잔액', value: totalIn - totalOut, color: 'text-club-blue' },
         ].map((item) => (
           <div key={item.label} className="rounded-xl border border-gray-200 bg-white p-4 text-center">
             <p className="text-xs text-gray-500">{item.label}</p>
