@@ -27,8 +27,8 @@ export default function SignupCompletePage() {
   async function handleSubmit(e: React.FormEvent) {
     e.preventDefault()
     setError('')
-    if (!/^\d{8}$/.test(studentId)) {
-      setError('학번은 8자리 숫자여야 합니다.')
+    if (!/^\d{10}$/.test(studentId)) {
+      setError('학번은 10자리 숫자여야 합니다.')
       return
     }
     setLoading(true)
@@ -63,11 +63,11 @@ export default function SignupCompletePage() {
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <Input label="이름" value={name} onChange={(e) => setName(e.target.value)} required />
         <Input
-          label="학번 (8자리)"
+          label="학번 (10자리)"
           value={studentId}
           onChange={(e) => setStudentId(e.target.value)}
-          maxLength={8}
-          pattern="\d{8}"
+          maxLength={10}
+          pattern="\d{10}"
           required
         />
         <div className="flex flex-col gap-1">
